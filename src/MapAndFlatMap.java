@@ -14,11 +14,11 @@ public class MapAndFlatMap {
 				                                  Arrays.asList("fd", "fd", "d"),
 				                           Arrays.asList("dsfds","ee","fd")                                  
 				);
-		Set<String>flatmaplIst = l1.stream()
+		List<String> flatmaplIst = l1.stream()
 				                    .flatMap(List :: stream)
 				                    .map(String :: toUpperCase)
 				                    //.distinct()
-				                    .collect(Collectors.toSet());
+				                    .collect(Collectors.toList());
 	    System.out.println(flatmaplIst);
 	}
 
